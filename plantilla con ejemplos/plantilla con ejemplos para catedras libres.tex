@@ -9,7 +9,7 @@
 \usepackage{float}
 \usepackage{tikz}
 
-%para tener todos los simbolos
+%para tener todos los si
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
@@ -33,13 +33,15 @@
 \spanishdecimal{.}
 
 
-\title{Tutorial Express de \LaTeX}
+\title{Plantilla Simple con Ejemplos de Latex B\'asico}
 \author{Mauricio Vargas}
 \makeindex
 
 \pagestyle{fancy}
-\lhead{Tutorial Express de Latex}
-\rhead{\href{pachamaltese.github.io}{Mauricio Vargas S.}}
+\lhead{}
+\rhead{\href{https://www.facebook.com/catedraslibres?fref=ts}{C\'atedras Libres}}
+
+\date{6 de mayo de 2014}
 
 \begin{document}
 
@@ -130,8 +132,10 @@ $$
 
 \textbf{Continuidad de una funci\'on de una variable}
 
-Una funci\'on $f$ es \emph{continua} en un punto $x_0$ en el dominio de la funci\'on
-si $\forall \varepsilon > 0 \: \exists \delta> 0$ tal que para todo $x$ en el dominio de la funci\'on se tiene que:
+Una funci\'on $f$ es \emph{continua en un punto} $x_0$ en el dominio de la funci\'on
+si
+$$\forall \varepsilon > 0 \quad \exists \delta> 0$$
+tal que para todo $x$ en el dominio de la funci\'on:
 $$|x-x_0|<\delta \Rightarrow |f(x)-f(x_0)|<\varepsilon$$
 
 \newpage
@@ -230,16 +234,9 @@ para obtener
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=1]{Flag_of_Hong_Kong.png} 
-\caption{\textsf{Bandera de Hong Kong.}}
+\includegraphics[scale=0.2]{logo.jpg} 
+\caption{\textsf{C\'atedras Libres, visita la \href{https://www.facebook.com/catedraslibres?fref=ts}{p\'agina web} de la iniciativa}}
 \end{figure}
-
-\begin{figure}[h]
-\centering
-\includegraphics[scale=1]{Flag_of_Hong_Kong_(1959-1997).png} 
-\caption{\textsf{Antigua bandera de Hong Kong.}}
-\end{figure}
-
 
 \newpage
 
@@ -247,6 +244,9 @@ para obtener
 
 %Si nos interesa saber m\'as de la ecuaci\'on \eqref{lagrangeano} se puede buscar en Wikipedia:\\
 %\url{http://es.wikipedia.org/wiki/Condiciones_de_Karush-Kuhn-Tucker}
+
+Si nos interesa saber m\'as sobre la ecuaci\'on \eqref{lagrangeano} podemos consultar en:\\
+\url{http://es.wikipedia.org/wiki/Condiciones_de_Karush-Kuhn-Tucker}
 
 Para complementar lo visto en el taller, cuya idea era aprender lo b\'asico de Latex, existe un buen manual para usuarios intermedios y avanzados:\\ 
 \url{http://es.wikibooks.org/wiki/Manual_de_LaTeX}
