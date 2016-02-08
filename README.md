@@ -10,6 +10,8 @@ Tutorial express de LaTeX que incluye el uso de:
 
 Forma parte de una seria de talleres desarrollados para Cátedras Libres (https://www.facebook.com/catedraslibres?fref=ts)
 
-My website visit [http://pachamaltese.github.io](http://pachamaltese.github.io)
+Visit [http://pachamaltese.github.io](http://pachamaltese.github.io)
 
--![alt text](http://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png "Under Creative Commons license")
+This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+
+![alt text](http://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png "Under Creative Commons license")
