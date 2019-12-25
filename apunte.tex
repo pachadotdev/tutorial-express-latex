@@ -1,0 +1,89 @@
+\documentclass[letterpaper,twoside, 10pt]{article}
+
+% paquetes matematicos
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% configuraciones, atajos y otros
+\usepackage{plantilla/apuntespuc}
+
+\title{{Apunte de ejemplo}}
+\author{{Pachá}}
+\makeindex
+
+\pagestyle{fancy}
+\lhead{}
+\rhead{{Apunte de ejemplo}}
+
+\date{{25 de diciembre de 2019}}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+{\hypertarget{capuxedtulo-1}{%
+\section{Capítulo 1}\label{capuxedtulo-1}}
+
+\hypertarget{paquetes}{%
+\subsection{Paquetes}\label{paquetes}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(datasauRus)}
+\KeywordTok{library}\NormalTok{(ggplot2)}
+\KeywordTok{library}\NormalTok{(dplyr)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'dplyr'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:stats':
+## 
+##     filter, lag
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:base':
+## 
+##     intersect, setdiff, setequal, union
+\end{verbatim}
+
+\hypertarget{gruxe1fico}{%
+\subsection{Gráfico}\label{gruxe1fico}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{datasaurus_dozen }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{filter}\NormalTok{(dataset }\OperatorTok{==}\StringTok{ "dino"}\NormalTok{) }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{ggplot}\NormalTok{() }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_point}\NormalTok{(}\KeywordTok{aes}\NormalTok{(x, y))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{apunte_files/figure-latex/dino-1.pdf}
+
+\hypertarget{atajos-latex}{%
+\subsection{Atajos latex}\label{atajos-latex}}
+
+Sea \(\f1\) bla bla
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\dpr{f}{x}\)
+\item
+  \(\dfx\), \(\dfy\)
+\item
+  \(\dfi\), \(\dfj\)
+\item
+  \(\ddfx\), \(\ddfy\)
+\end{enumerate}}
+
+\end{document}

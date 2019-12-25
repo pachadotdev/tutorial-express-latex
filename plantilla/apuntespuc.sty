@@ -1,0 +1,194 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{apuntespuc}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+%separador de miles en espaniol
+\spanishdecimal{.}
+
+\usepackage[mathlf,textlf,minionint,openg]{MinionPro}
+\usepackage[bb=lucida,bbscaled=1,cal=boondoxo]{mathalfa}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{fancyhdr}
+
+%para manipular imagenes
+\usepackage{float}
+\usepackage{graphicx}
+
+\usepackage{fancybox}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+
+\usepackage[linkcolor=blue,colorlinks=true,urlcolor=blue]{hyperref}
+
+%sangria e interlineado
+\parskip=1em
+\parindent=0em
+
+%margenes
+\headheight 33pt
+\topmargin 0.2cm
+\oddsidemargin 1cm
+\evensidemargin 1cm
+\textwidth 15cm
+\textheight 19cm
+
+\newcommand{\tssi}{si y s\'olo si}
+\newcommand{\grafo}{\operatorname{grafo}}
+\newcommand{\argmin}{\operatorname{argmin}}
+\newcommand{\argmax}{\operatorname{argmax}}
+\newcommand{\ind}[1]{\mathbf{1}_{#1}}
+\newcommand{\halmos}{\hspace*{\fill}$\blacksquare$}
+\newcommand{\ep}[2]{P_{#1}(#2)}
+\newcommand{\card}[1]{\bigr\lvert#1\bigl\rvert}
+
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+\newcommand{\babs}[1]{\biggr\lvert#1\biggl\rvert}
+\newcommand{\bigabs}[1]{\bigr\lvert#1\bigl\rvert}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+\newcommand{\evaluado}{\biggr |}
+\newcommand{\diam}[1]{\operatorname{diam}(#1)}
+\newcommand{\cl}{{\cal{C}}^1}
+\newcommand{\dd}{\partial}
+\newcommand{\dpr}[2]{\frac{\partial #1}{\partial #2}}
+
+\newcommand{\interior}{\operatorname{int}}
+\newcommand{\familiaEleccion}{selecci\'on}
+\newcommand{\familiasEleccion}{selecciones}
+\newcommand{\feleccion}[1]{#1 \allowbreak \text{ \familiaEleccion}}
+
+\def\suc{\{x_n\}_{n\in\N}}
+\newcommand{\ssuc}{\{x_{n_k}\}_{k\in\N}}
+\newcommand{\sen}{\text{sen}}
+\newcommand{\senh}{\text{senh}}
+\newcommand{\adh}[1]{\text{adh}({#1})}
+\newcommand{\der}[1]{\text{der}({#1})}
+\newcommand{\inte}[1]{\text{int}({#1})}
+\newcommand{\fr}[1]{\text{fr}({#1})}
+\newcommand{\co}[1]{\text{co}({#1})}
+
+\def\nin{\:\in\!\!\!\!\!/\:\:}
+\def\pun{(x,y,z)}
+\def\p0{(x_0,y_0,z_0)}
+
+\def\FF{{\cal F}}
+\def\du{\frac{\partial u}{\partial t}}
+\def\dfx{\frac{\partial f}{\partial x}}
+\def\dfy{\frac{\partial f}{\partial y}}
+\def\dfi{\frac{\partial f}{\partial x_i}}
+\def\dfj{\frac{\partial f}{\partial x_j}}
+\def\dFx{\frac{\partial F}{\partial x}}
+\def\dFy{\frac{\partial F}{\partial y}}
+\def\dFj{\frac{\partial F}{\partial x_j}}
+\def\dgx{\frac{\partial g}{\partial x}}
+\def\dgy{\frac{\partial g}{\partial y}}
+\def\dgj{\frac{\partial g}{\partial x_j}}
+\def\f1{f:A\subseteq\R^n\to\R}
+\def\ddfyx{\frac{\partial^2 f}{\partial y\partial x}}
+\def\ddfxy{\frac{\partial^2 f}{\partial x\partial y}}
+\def\ddfx{\frac{\partial^2 f}{\partial x^2}}
+\def\ddfy{\frac{\partial^2 f}{\partial y^2}}
+\def\ddfij{\frac{\partial^2 f}{\partial x_j\partial x_i}}
+\def\ddfji{\frac{\partial^2 f}{\partial x_i\partial x_j}}
+\def\dfij{\frac{\partial f_i}{\partial x_j}}
+\def\fm{f:A\subseteq\R^n\to\R^m}
+\def\fgm{f,g:A\subseteq\R^n\to\R^m}
+
+\def\FF{{\cal F}}
+\def\12p{\frac{1}{(2\pi)^{N/2}}}
+\def\du{\frac{\partial u}{\partial t}}
+\def\dfx{\frac{\partial f}{\partial x}}
+\def\dfy{\frac{\partial f}{\partial y}}
+\def\dfi{\frac{\partial f}{\partial x_i}}
+\def\dfj{\frac{\partial f}{\partial x_j}}
+\def\dFx{\frac{\partial F}{\partial x}}
+\def\dFy{\frac{\partial F}{\partial y}}
+\def\dFj{\frac{\partial F}{\partial x_j}}
+\def\dgx{\frac{\partial g}{\partial x}}
+\def\dgy{\frac{\partial g}{\partial y}}
+\def\dgj{\frac{\partial g}{\partial x_j}}
+\def\f1{f:A\subseteq\R^n\to\R}
+\def\ddfyx{\frac{\partial^2 f}{\partial y\partial x}}
+\def\ddfxy{\frac{\partial^2 f}{\partial x\partial y}}
+\def\ddfx{\frac{\partial^2 f}{\partial x^2}}
+\def\ddfy{\frac{\partial^2 f}{\partial y^2}}
+\def\ddfij{\frac{\partial^2 f}{\partial x_j\partial x_i}}
+\def\ddfji{\frac{\partial^2 f}{\partial x_i\partial x_j}}
+\def\dfij{\frac{\partial f_i}{\partial x_j}}
+\def\fm{f:A\subseteq\R^n\to\R^m}
+\def\fgm{f,g:A\subseteq\R^n\to\R^m}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\I}{\mathbb{I}}
+
+%\def\NN{\hbox{I\kern-.2em\hbox{N}}}
+%\def\R{{I\!\!R}} 
+%\def\ZZ{{{\rm Z}\kern-.28em{\rm Z}}}
+
+%DOS ESTILOS PARA VECTORES
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+%\renewcommand{\vec}[1]{\mathbf{#1}}
+
+\theoremstyle{definition}
+\newtheorem{defi}{Definición}
+\newtheorem{car}{Caracterización}
+\headheight 36pt
+\usepackage{geometry}
+\geometry{verbose,letterpaper,tmargin=30mm,bmargin=30mm,lmargin=25mm,rmargin=25mm}
+\parindent 0em
+\parskip 1ex
+
+\newtheorem{ejercicio}{Ejercicio}
+\newtheorem{teorema}{Teorema}
+\newtheorem{lema}{Lema}
+\newtheorem{corolario}{Corolario}
+\theoremstyle{definition}\newtheorem{definicion}{Definición}
+\theoremstyle{definition}\newtheorem{ejemplo}{Ejemplo}
+\theoremstyle{remark}\newtheorem{nota}{\textsc{Nota}}
+\theoremstyle{definition}\newtheorem{proposicion}{Proposición}
+\theoremstyle{definition}\newtheorem{problema}{Problema}
+\newenvironment{demostracion}{\textit{Demostraci\'{o}n.}}{\halmos}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}

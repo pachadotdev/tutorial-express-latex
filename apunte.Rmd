@@ -1,0 +1,42 @@
+---
+titulo: "Apunte de ejemplo"
+autor: "Pachá"
+fecha: "25 de diciembre de 2019"
+output: 
+  pdf_document:
+    latex_engine: pdflatex
+    template: plantilla/apuntespuc.tex
+    keep_tex: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Capítulo 1
+
+## Paquetes
+
+```{r paquetes}
+library(datasauRus)
+library(ggplot2)
+library(dplyr)
+```
+
+## Gráfico
+
+```{r dino}
+datasaurus_dozen %>% 
+  filter(dataset == "dino") %>% 
+  ggplot() +
+  geom_point(aes(x, y))
+```
+
+## Atajos latex
+
+Sea $\f1$ bla bla
+
+1. $\dpr{f}{x}$
+2. $\dfx$, $\dfy$
+3. $\dfi$, $\dfj$
+4. $\ddfx$, $\ddfy$

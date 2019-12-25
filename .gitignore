@@ -1,0 +1,13 @@
+.aux
+.id
+.log
+.out
+.toc
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*_files
+src/*.o
+src/*.so
+src/*.dll
