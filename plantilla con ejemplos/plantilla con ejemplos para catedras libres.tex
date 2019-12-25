@@ -1,0 +1,257 @@
+\documentclass[letterpaper,twoside]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[spanish]{babel}
+\usepackage{fancyhdr}
+
+%para manipular imagenes
+\usepackage{float}
+\usepackage{tikz}
+
+%para tener todos los si
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\usepackage{color}
+\usepackage[linkcolor=blue,colorlinks=true,urlcolor=blue]{hyperref}
+
+%sangria e interlineado
+\parskip=1em
+\parindent=0em
+
+%margenes
+\headheight 33pt
+\topmargin 0.2cm
+\oddsidemargin 1cm
+\evensidemargin 1cm
+\textwidth 15cm
+\textheight 19cm
+
+%separador de miles en espaniol
+\spanishdecimal{.}
+
+
+\title{Plantilla Simple con Ejemplos de Latex B\'asico}
+\author{Mauricio Vargas}
+\makeindex
+
+\pagestyle{fancy}
+\lhead{}
+\rhead{\href{https://www.facebook.com/catedraslibres?fref=ts}{C\'atedras Libres}}
+
+\date{6 de mayo de 2014}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{Motivaci\'on}
+
+\LaTeX\: no es muy amistoso para trabajar con tablas e im\'agenes. Siendo justos debemos decir que las ventajas de Latex se centran en la rapidez y facilidad para escribir f\'ormulas matem\'aticas sumado a que es muy f\'acil editarlas. 
+
+A diferencia de programas como Word, donde es f\'acil poner im\'agenes pero es complicado escribir y editar f\'ormulas, Latex no est\'a pensado para ser un programa de uso general sino que se enfoca a la creaci\'on de informes, art\'iculos y libros cient\'ificos. Por esto es que es un programa de especial utilidad para estudiantes y profesionales del \'area de ciencias e ingenier\'ia como tambi\'en para quienes necesiten utilizar herramientas estad\'isticas.
+
+Muchas revistas, entre estas la \href{http://www.ams.org/home/page}{American Mathematical Society Journal}, tienen disponibles en sus p\'aginas varias plantillas para enviarles art\'iculos, con la finalidad de que los autores s\'olo se preocupen de escribir y no de los aspectos est\'eticos de los documentos. Algunas editoriales como \href{http://www.ams.org/home/page}{Springer} utilizan Latex pues simplifica enormemente la escritura de textos largos y que contengan f\'ormulas matem\'aticas.
+
+Daremos algunos ejemplos para complementar lo visto en los talleres realizados para la iniciativa \href{https://www.facebook.com/catedraslibres?fref=ts}{C\'atedras Libres}.
+
+Este material est\'a disponible bajo la \href{http://creativecommons.org/licenses/by-nc/3.0/}{Licencia Creative Commons}. Se puede redistribuir y editar libremente, sin usos comerciales, citando debidamente la fuente.
+
+\newpage
+
+\section{?`C\'omo insertar ecuaciones simples?}
+
+El cuadrado de binomio\footnote{\quad \url{http://es.wikipedia.org/wiki/Cuadrado_de_un_binomio}}, de ecuaci\'on $(a+b)^2$, se desarrolla como sigue 
+$$(a+b)^2 = (a+b)(a+b) = a^2 + 2ab + b^2$$
+
+De todas maneras conviene numerar ecuaciones notando que esta ecuaci\'on es independiente de las variables empleadas, es decir,
+\begin{equation}
+(a+b)^2 = a^2 + 2ab + b^2
+\end{equation}
+es lo mismo que
+\begin{eqnarray}
+(x+y)^2 &=& x^2+2xy+y^2 \\
+(p+q)^2 &=& p^2+2pq+q^2
+\end{eqnarray}
+
+\newpage
+
+\section{?`C\'omo insertar ecuaciones simples con letras griegas y s\'imbolos especiales?}
+
+Podemos usar numeraciones especiales para las ecuaciones o incluso dejarlas con sus respectivos nombres
+
+\textbf{Serie geom\'etrica}: Sea $r\in (0,1)$ se tiene que la suma de exponentes consecutivos de $r^i$ converge, es decir
+\begin{gather}
+\sum_{i=0}^{\infty} r^i = \frac{1}{1-r} \tag{serie geom\'etrica}
+\end{gather}
+notamos que $r$ puede crecer de manera tal que
+$$
+\lim_{r\to \infty} \frac{1}{1-r} = 0
+$$
+o escrito de otra manera
+$$
+\sum_{i=0}^{\infty} r^i = \frac{1}{1-r} \stackrel{r\to \infty}{\longrightarrow} 0
+$$
+
+Por otra parte puede que nos interese escribir en caracteres un poco m\'as complejos. Daremos dos ejemplos:
+
+\textbf{Distribuci\'on Normal}
+\begin{equation}
+\mathcal{N}(\mu,\sigma^2) = \int\limits_{-\infty}^{x} \frac1{\sigma\sqrt{2\pi}}\: \exp{-\frac{1}{2}\left(\frac{t-\mu}{\sigma}\right)^2}\: dt
+\end{equation}
+
+\textbf{Lagrangeano de un sistema}
+\begin{equation}\label{lagrangeano}
+L(\vec{x},\vec{\lambda},\vec{\mu}) = f(\vec{x}) + \sum_{i\in I} \lambda_i g_i(\vec{x}) + \sum_{j\in J(\vec{x}_0)} \mu_j h_j(\vec{x})
+\end{equation}
+
+\newpage
+
+\section{Insertar Cuantificadores y operadores matem\'aticos}
+
+\subsection{Uni\'on e intersecci\'on}
+
+Supongamos que $A_1$ y $A_2$ son disjuntos, entonces
+$$
+(A_1 \cup A_2 \neq \varnothing) \wedge (A_2 \cap A_2 = \varnothing)
+$$
+
+Si tenemos $n$ conjuntos $A_i$, consideremos el conjunto $\Lambda = \{1,2,\ldots , n\}$, entonces la uni\'on e intersecci\'on de $n$ partes se escribe
+$$
+\bigcup_{i\in \Lambda} A_i
+$$
+
+$$
+\bigcap_{i\in \Lambda} A_i
+$$
+
+\subsection{Uso de cuantificadores}
+
+\textbf{Continuidad de una funci\'on de una variable}
+
+Una funci\'on $f$ es \emph{continua en un punto} $x_0$ en el dominio de la funci\'on
+si
+$$\forall \varepsilon > 0 \quad \exists \delta> 0$$
+tal que para todo $x$ en el dominio de la funci\'on:
+$$|x-x_0|<\delta \Rightarrow |f(x)-f(x_0)|<\varepsilon$$
+
+\newpage
+
+\section{Ejemplos con matrices}
+
+Tenemos dos estilos de matrices
+$$
+\begin{pmatrix}
+1 & 0 \\
+0 & 1
+\end{pmatrix}
+\text{ o tambi\'en }
+\begin{bmatrix}
+1 & 0 \\
+0 & 1
+\end{bmatrix}
+$$
+
+La inversa de la matriz\footnote{Se pueden importar matrices desde Matlab, las de este ejemplo se obtuvieron de esta forma}
+$$
+\begin{pmatrix}
+2 & 1 & 2 \\
+0 & 3 & 1 \\
+5 & 6 & 7
+\end{pmatrix}
+$$
+es la matriz
+$$
+\begin{pmatrix}
+    3.0000  &  1.0000  &  -1.0000 \\
+    1.0000  &  0.8000  & -0.4000 \\
+   -3.0000  &  -1.4000 &  1.2000
+\end{pmatrix}
+$$
+entonces
+$$
+\begin{pmatrix}
+2 & 1 & 2 \\
+0 & 3 & 1 \\
+5 & 6 & 7
+\end{pmatrix}
+\begin{pmatrix}
+    3.0000  &  1.0000  &  -1.0000 \\
+    1.0000  &  0.8000  & -0.4000 \\
+   -3.0000  &  -1.4000 &  1.2000
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+$$
+
+\newpage
+
+\section[Tablas]{Tablas\footnote{\quad Este t\'opico es bastante complicado de dominar en Latex por lo que se ver\'a en detalles (combinando celdas, etc) en un taller avanzado}}
+
+Tabla b\'asica:
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline 
+\text{Rango et\'areo} & \text{Frecuencia} \\ 
+\hline 
+[0-15] & 20 \\ 
+\hline 
+[15-25] & 10 \\ 
+\hline 
+\end{tabular}
+\end{center}
+
+\newpage
+
+\section{Consideraciones adicionales con algunos s\'imbolos}
+
+Los signos \%, \&, etc, como realizan distintas tareas tales como hacer que una l\'inea sea ignorada en el pdf o alinear matrices, se deben escribir anteponiendo $\backslash$.
+
+De no hacerlo tendr\'iamos que una frase como \emph{``Las acciones subieron un 2''} en lugar de \emph{``Las acciones subieron un 2\%''}.
+
+Los acentos y e\~nes se pueden escribir directamente, sin embargo es recomendable escribirlos de la siguiente forma:
+
+\begin{verbatim}
+\'a \'e \'i \'o \'u \~n
+\end{verbatim}
+
+para obtener
+\begin{center}
+\'a \'e \'i \'o \'u \~n
+\end{center}
+
+\newpage
+
+\section{Insertar figuras}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.2]{logo.jpg} 
+\caption{\textsf{C\'atedras Libres, visita la \href{https://www.facebook.com/catedraslibres?fref=ts}{p\'agina web} de la iniciativa}}
+\end{figure}
+
+\newpage
+
+\section{Insertar enlaces y material \'util}
+
+%Si nos interesa saber m\'as de la ecuaci\'on \eqref{lagrangeano} se puede buscar en Wikipedia:\\
+%\url{http://es.wikipedia.org/wiki/Condiciones_de_Karush-Kuhn-Tucker}
+
+Si nos interesa saber m\'as sobre la ecuaci\'on \eqref{lagrangeano} podemos consultar en:\\
+\url{http://es.wikipedia.org/wiki/Condiciones_de_Karush-Kuhn-Tucker}
+
+Para complementar lo visto en el taller, cuya idea era aprender lo b\'asico de Latex, existe un buen manual para usuarios intermedios y avanzados:\\ 
+\url{http://es.wikibooks.org/wiki/Manual_de_LaTeX}
+
+Tambi\'en es posible exportar tablas desde excel y ahorrarse cabezazos (y muchas l\'ineas de c\'odigo) con un complemento para excel creado por la comunidad de usuarios de Latex:\\
+\url{http://www.ctan.org/tex-archive/support/excel2latex} 
+
+\end{document}
